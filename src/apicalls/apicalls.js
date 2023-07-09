@@ -7,3 +7,5 @@ const getAnswer = async () => {
     let data = response.json()
     return data
 }
+
+export { getAnswer };
