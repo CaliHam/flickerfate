@@ -1,11 +1,13 @@
 import './History.css'
 
-const History = () => {
-
+const History = ({ saved }) => {
+    // console.log(saved)
+    
 
     return (
-        <>
-        </>
+        <div>
+            <p>hi</p>
+        </div>
     )
 }
 
