@@ -17,9 +17,7 @@ const App = () => {
   }
 
   const updateSaved = () => {
-    const savedQA = {submitted, answer: answer.answer, image: answer.image}
-    console.log(saved)
-    console.log(savedQA)
+    const savedQA = {question: submitted, answer: answer.answer, image: answer.image, id: Date.now()}
     setSaved([...saved, savedQA])
 }
 

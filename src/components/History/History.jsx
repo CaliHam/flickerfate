@@ -1,13 +1,19 @@
 import './History.css'
 
 const History = ({ saved }) => {
-    // console.log(saved)
-    
+
+    const viewSaved = saved.map(blob => {
+        return (
+            <div className='response-container' key={blob.id}>
+                <p>You asked: {blob.question}</p>
+                <img src={blob.image}></img>
+                <p>Answer: {blob.answer}</p>
+            </div>
+        )
+    })
 
     return (
-        <div>
-            <p>hi</p>
-        </div>
+        <>{saved && viewSaved}</>
     )
 }
 
