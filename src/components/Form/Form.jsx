@@ -6,7 +6,6 @@ const Form = ({ submitted, setSubmitted }) => {
 
     const [question, setQuestion] = useState('')
 
-
     const submitQuestion = (e) => {
         e.preventDefault()
         setSubmitted(question)

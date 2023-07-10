@@ -17,9 +17,9 @@ const Response = ({ question, answer, setAnswer }) => {
     const renderResponse = (answer) => {
         return (
             <div className='response-container'>
-                <p>You asked: {question}</p>
+                <p><b>You asked:</b> {question}</p>
                 <img src={answer.image}></img>
-                <p>Answer: {answer.answer}</p>
+                <p><b>Answer:</b> {answer.answer}</p>
             </div>
         )
     }
