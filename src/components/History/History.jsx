@@ -1,14 +1,17 @@
 import './History.css'
 
-const History = ({ saved }) => {
+const History = ({ saved, goHome }) => {
 
-    const viewSaved = saved.map(blob => {
+    const viewSaved = saved.map(prophecy => {
         return (
-            <div className='response-container' key={blob.id}>
-                <p>You asked: {blob.question}</p>
-                <img src={blob.image}></img>
-                <p>Answer: {blob.answer}</p>
-            </div>
+            <>
+                <button onClick={goHome}>Back</button>
+                <div className='response-container' key={prophecy.id}>
+                    <p>You asked: {prophecy.question}</p>
+                    <img src={prophecy.image}></img>
+                    <p>Answer: {prophecy.answer}</p>
+                </div>
+            </>
         )
     })
 
