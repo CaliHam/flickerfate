@@ -1,0 +1,20 @@
+input, button {
+    border: none;
+    background: hsl(0 0% 93%);
+    border-radius: .25rem;
+    padding: .75rem 1rem;
+    margin: .5rem;
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.2);
+}
+
+button {
+    background: #CBB687;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #e0cca0;
+    transform: scale(1.1);
+    transition: .2s ease all;
+}

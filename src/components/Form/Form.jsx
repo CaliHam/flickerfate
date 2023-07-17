@@ -1,21 +1,25 @@
 import './Form.css';
 import { useState } from 'react';
-import { getAnswer } from '../../apicalls/apicalls'
-import Response from '../Response/Response';
 
-const Form = () => {
 
-    // const [result, setResult] = useState('')
-    
-    const showResult = () => {
-        // getAnswer.then(data => setResult(data))
+const Form = ({ submitted, setSubmitted }) => {
+
+    const [question, setQuestion] = useState('')
+
+    const submitQuestion = (e) => {
+        e.preventDefault()
+        setSubmitted(question)
+        clearInput()
+    }
+
+    const clearInput = () => {
+        setQuestion('')
     }
 
     return (
         <form>
-            <input placeholder='Ask your question here'></input>
-            <button type='submit' onClick={showResult()}>Submit</button>
-            {/* <Response result={result} /> */}
+            <input placeholder='Ask your question here' value={question} onChange={e => setQuestion(e.target.value)}></input>
+            <button type='submit' onClick={e => submitQuestion(e)}>Submit</button>
         </form>
     )
 }
