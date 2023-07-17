@@ -2,19 +2,7 @@ import './Form.css';
 import { useState } from 'react';
 
 
-const Form = ({ submitted, setSubmitted }) => {
-
-    const [question, setQuestion] = useState('')
-
-    const submitQuestion = (e) => {
-        e.preventDefault()
-        setSubmitted(question)
-        clearInput()
-    }
-
-    const clearInput = () => {
-        setQuestion('')
-    }
+const Form = ({ question, setQuestion, submitQuestion }) => {
 
     return (
         <form>
