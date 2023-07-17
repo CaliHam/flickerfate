@@ -26,8 +26,9 @@ Through this project, my primary objectives are:
 
 ## Project Preview
 
-![project preview]('src/assets/preview1.png')
-![project preview]('src/assets/preview2.png')
+![preview1](https://github.com/CaliHam/flickerfate/assets/126219151/d53e51a5-fafe-49e2-9a08-345bc9e1e49b)
+![preview2](https://github.com/CaliHam/flickerfate/assets/126219151/8c224c4d-29c8-49e3-bf4a-c5a85add18ac)
+
 
 ## Set up
 
