@@ -1,7 +1,11 @@
 import './History.css'
 import { Link } from 'react-router-dom'
 
-const History = ({ saved, setSubmitted }) => {
+const History = ({ saved, submittedQA, setSubmittedQA }) => {
+
+    const clearAnswer = () => {
+        setSubmittedQA({...submittedQA, submitted: null})
+    }
 
     const viewSaved = saved.map(prophecy => {
         return (
@@ -15,7 +19,7 @@ const History = ({ saved, setSubmitted }) => {
 
     return (
         <>
-        <Link to="/"><button onClick={setSubmitted(null)}>Back</button></Link>
+        <Link to="/"><button onClick={clearAnswer}>Back</button></Link>
         <h2>Saved Prophecies:</h2>
         {viewSaved}
         </>

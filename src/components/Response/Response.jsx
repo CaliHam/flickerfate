@@ -1,18 +1,11 @@
-import { useEffect } from 'react';
 import './Response.css'
-import { getAnswer } from '../../apicalls/apicalls'
 
-const Response = ({ question, answer, setAnswer }) => {
+const Response = ({ submitted, answer }) => {
 
-    useEffect(() => {
-        getAnswer().then(data => setAnswer(data))
-        .catch(err => console.log(err))
-    }, [question])
-
-    const renderResponse = (answer) => {
+    const renderResponse = () => {
         return (
             <div className='response-container'>
-                <p><span><b>You asked:</b> {question}</span></p>
+                <p><span><b>You asked:</b> {submitted}</span></p>
                 <img src={answer.image}></img>
                 <p><span><b>Answer:</b> {answer.answer}</span></p>
             </div>
@@ -20,7 +13,7 @@ const Response = ({ question, answer, setAnswer }) => {
     }
 
     return (
-        <>{!answer ? 'Loading' : renderResponse(answer)}</>
+        <>{!submitted ? 'Loading' : renderResponse()}</>
     )
 }
 
