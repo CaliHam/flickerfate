@@ -1,8 +1,9 @@
 # FlickerFate
-This application allows users to ask a question and receive a yes-or-no response in the form of a gif. Visit the site [here!](https://flickerfate.vercel.app/)
+This application allows users to ask a question and receive a yes-or-no response in the form of a gif. 
+Visit the site [here!](https://flickerfate.vercel.app/)
 
 ## Technologies Used
-React, create-react-app, CSS, HTML, JavaScript
+React, create-react-app, Router, CSS, HTML, JavaScript
 
 ## Contributors:
 <a href="https://github.com/CaliHam">Calli Herrmann</a>
@@ -17,9 +18,10 @@ Through this project, my primary objectives are:
 - Strengthen my understanding of React's modular and reusable component structure.
 - Apply best practices for organizing and structuring a React project in accordance with industry standards.
 - Develop a functional and visually appealing user interface using React's declarative approach and component-based architecture.
+- Incorporate Router to organize user navigation to separate pages.
 
 ## Project Preview
-![gif project preview]('public/preview.gif')
+![gif project preview]('src/assets/preview.gif')
 
 ## Set up
 1. Fork or clone down this respository. 
