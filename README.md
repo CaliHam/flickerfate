@@ -1,5 +1,5 @@
 # FlickerFate
-This application allows users to ask a question and receive a yes-or-no response in the form of a gif.
+This application allows users to ask a question and receive a yes-or-no response in the form of a gif. Visit the site [here!](https://flickerfate.vercel.app/)
 
 ## Technologies Used
 React, create-react-app, CSS, HTML, JavaScript
@@ -19,7 +19,7 @@ Through this project, my primary objectives are:
 - Develop a functional and visually appealing user interface using React's declarative approach and component-based architecture.
 
 ## Project Preview
-![gif project preview]('url')
+![gif project preview]('public/preview.gif')
 
 ## Set up
 1. Fork or clone down this respository. 

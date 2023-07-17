@@ -7,16 +7,6 @@
   align-items: center;
   border-radius: 20px;
   padding-bottom: 1.5rem;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
-button {
-  width: fit-content;
-  align-self: center;
-}
-
-.btns-nav {
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-}
