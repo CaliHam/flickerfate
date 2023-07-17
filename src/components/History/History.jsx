@@ -4,19 +4,19 @@ const History = ({ saved, goHome }) => {
 
     const viewSaved = saved.map(prophecy => {
         return (
-            <>
-                <button onClick={goHome}>Back</button>
-                <div className='response-container' key={prophecy.id}>
-                    <p>You asked: {prophecy.question}</p>
-                    <img src={prophecy.image}></img>
-                    <p>Answer: {prophecy.answer}</p>
-                </div>
-            </>
+            <div className='response-container' key={prophecy.id}>
+                <p><span><b>You asked:</b> {prophecy.question}</span></p>
+                <img src={prophecy.image}></img>
+                <p><span><b>Answer:</b> {prophecy.answer}</span></p>
+            </div>
         )
     })
 
     return (
-        <>{saved && viewSaved}</>
+        <>
+        <button onClick={goHome}>Back</button>
+        {saved && viewSaved}
+        </>
     )
 }
 

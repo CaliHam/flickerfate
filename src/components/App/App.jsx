@@ -33,8 +33,10 @@ const App = () => {
       <h1>FlickerFate</h1>
       <h2>Ask a yes-or-no question and fate will decide your response!</h2>
       {showForm && <Form submitted={submitted} setSubmitted={setSubmitted}/>}
-      {!!saved.length && <button onClick={viewHistory}>View Saved</button>}
-      {submitted && <button onClick={updateSaved}>Save</button>}
+      <nav className='btns-nav'>
+        {!!saved.length && <button onClick={viewHistory}>View Saved</button>}
+        {submitted && <button onClick={updateSaved}>Save</button>}
+      </nav>
       {submitted && <Response question={submitted} answer={answer} setAnswer={setAnswer}/>}
       {showHistory && <History saved={saved} goHome={goHome}/>}
     </div>
