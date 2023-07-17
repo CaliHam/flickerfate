@@ -1,8 +1,9 @@
 import './App.css';
 import { useState } from 'react';
-import Form from '../Form/Form';
+import { Routes, Route, Link } from 'react-router-dom';
 import History from '../History/History';
-import Response from '../Response/Response';
+import Home from '../Home/Home';
+
 
 const App = () => {
 
@@ -12,16 +13,16 @@ const App = () => {
   const [showHistory, setShowHistory] = useState(false)
   const [showForm, setForm] = useState(true)
 
-  const viewHistory = () => {
-    setShowHistory(true)
-    setSubmitted(null)
-    setForm(false)
-  }
+  // const viewHistory = () => {
+  //   setShowHistory(true)
+  //   setSubmitted(null)
+  //   setForm(false)
+  // }
 
-  const goHome = () => {
-    setShowHistory(false)
-    setForm(true)
-  }
+  // const goHome = () => {
+  //   setShowHistory(false)
+  //   setForm(true)
+  // }
 
   const updateSaved = () => {
     const savedQA = {question: submitted, answer: answer.answer, image: answer.image, id: Date.now()}
@@ -29,16 +30,13 @@ const App = () => {
 }
 
   return (
-    <div className="App">
+    <div className='App'>
       <h1>FlickerFate</h1>
       <h2>Ask a yes-or-no question and fate will decide your response!</h2>
-      {showForm && <Form submitted={submitted} setSubmitted={setSubmitted}/>}
-      <nav className='btns-nav'>
-        {!!saved.length && <button onClick={viewHistory}>View Saved</button>}
-        {submitted && <button onClick={updateSaved}>Save</button>}
-      </nav>
-      {submitted && <Response question={submitted} answer={answer} setAnswer={setAnswer}/>}
-      {showHistory && <History saved={saved} goHome={goHome}/>}
+      <Routes>
+        <Route path="/" element={<Home submitted={submitted} setSubmitted={setSubmitted} answer={answer} setAnswer={setAnswer} saved={saved} updateSaved={updateSaved}/>}/>
+        <Route path="/saved" element={<History saved={saved}/>}/>
+      </Routes>
     </div>
   );
 }
